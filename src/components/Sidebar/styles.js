@@ -1,0 +1,56 @@
+import styled from 'styled-components';
+
+export const Container = styled.aside`
+  height: 100%;
+  width: 100%;
+  max-width: 250px;
+  background: #202020;
+  color: #fff;
+  position: fixed;
+  overflow-x: auto;
+
+  margin-top: 56px;
+`;
+
+export const Section = styled.div`
+  padding-top: 12px;
+
+  span {
+    font-size: 16px;
+    color: #ccc;
+    text-transform: uppercase;
+    margin-left: 25px;
+  }
+
+  & + div {
+    border-top: 1px solid #333;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background: transparent;
+        border: 0;
+        width: 100%;
+        height: 40px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 5px 25px;
+
+        svg {
+          margin-right: 10px;
+        }
+
+        &:hover {
+          background: #333;
+        }
+      }
+    }
+  }
+`;
