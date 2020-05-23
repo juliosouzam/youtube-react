@@ -2,21 +2,23 @@ import styled from 'styled-components';
 
 export const Container = styled.aside`
   height: 100%;
-  width: 100%;
-  max-width: 250px;
   background: #202020;
   color: #fff;
   position: fixed;
-  overflow-x: auto;
-
   margin-top: 56px;
+  overflow-y: hidden;
+  display: ${props => (props.toggled ? 'block' : 'none')};
+
+  &:hover {
+    overflow-y: scroll;
+  }
 `;
 
 export const Section = styled.div`
   padding-top: 12px;
 
   span {
-    font-size: 16px;
+    font-size: 14px;
     color: #ccc;
     text-transform: uppercase;
     margin-left: 25px;
@@ -52,5 +54,9 @@ export const Section = styled.div`
         }
       }
     }
+  }
+
+  &:last-child {
+    margin-bottom: 200px;
   }
 `;

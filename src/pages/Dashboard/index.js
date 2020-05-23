@@ -1,13 +1,18 @@
 import React from 'react';
 
 import Sidebar from '../../components/Sidebar';
+import Section from '../../components/Section';
 
-import { Container } from './styles';
+import { Container, Content } from './styles';
 
-export default function Dashboard() {
+export default function Dashboard({ toggled }) {
   return (
     <Container>
-      <Sidebar />
+      <Sidebar toggled={toggled} />
+
+      <Content>
+        <Section />
+      </Content>
     </Container>
   );
 }

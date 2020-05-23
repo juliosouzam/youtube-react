@@ -11,11 +11,11 @@ import { Container, Logo, Form, Actions, Profile } from './styles';
 
 import logoImg from '../../assets/logo-light.svg';
 
-export default function Header() {
+export default function Header({ toggle, setToggle }) {
   return (
     <Container>
       <Logo>
-        <button type="button">
+        <button type="button" onClick={() => setToggle(!toggle)}>
           <MdDehaze size={24} color="#ccc" />
         </button>
         <div>
